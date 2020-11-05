@@ -1,0 +1,31 @@
+﻿@model Demo.WebClient.DbModels.InventoryItemDetails
+
+@{
+    ViewData["Title"] = "Deactivate";
+}
+
+<h1>Deactivate</h1>
+
+<h4>InventoryItemDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Deactivate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.Hidden("id", Model.Id)
+            @Html.Hidden("version", Model.Version)
+
+            <h3>
+                Deactivate
+            </h3>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

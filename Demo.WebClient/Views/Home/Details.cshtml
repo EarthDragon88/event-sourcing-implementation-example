@@ -1,0 +1,38 @@
+﻿@model Demo.WebClient.DbModels.InventoryItemDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>InventoryItemDetails</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CurrentCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CurrentCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Version)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Version)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="ChangeName" asp-route-id="@Model.Id">ChangeName</a> |
+    <a asp-action="CheckIn" asp-route-id="@Model.Id">CheckIn</a>
+    <a asp-action="Remove" asp-route-id="@Model.Id">Remove</a> |    |
+    <a asp-action="Index">Back to List</a>
+</div>
